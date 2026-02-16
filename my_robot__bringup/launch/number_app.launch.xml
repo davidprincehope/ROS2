@@ -1,0 +1,9 @@
+<launch> 
+    <node pkg = "my_py_pkg" exec = "number_publisher"  name ="my_number_publisher"> 
+        <remap from="/number" to="/my_number" />
+        <param from="$(find-pkg-share my_robot__bringup)/config/number_app_param.yaml" />
+    </node>
+    <node pkg = "my_py_pkg" exec = "number_counter" name="my_number_counter"> 
+        <remap from="/number" to="/my_number" />
+    </node>
+</launch> 

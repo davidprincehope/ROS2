@@ -1,0 +1,3 @@
+bool led_one_state
+bool led_two_state
+bool led_three_state 
